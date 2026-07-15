@@ -102,8 +102,10 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
-.input-retro[type=number] {
-  -moz-appearance: textfield;
+.input-retro::-webkit-outer-spin-button,
+.input-retro::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* TÍTULO */
