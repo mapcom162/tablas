@@ -1,133 +1,4 @@
-/* RESETEO BÁSICO */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #4b774b, #236423);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-/* CONTENEDOR PRINCIPAL */
-.contenedor-principal {
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-
-/* FILA SUPERIOR: BOTÓN */
-.header-top {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.btn-probar {
-  background-color: white;
-  color: #2a5298;
-  border: none;
-  width: 100%;
-  max-width: 300px; /* Tamaño del botón controlado */
-  padding: 14px;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.25s ease;
-}
-
-.btn-probar:hover {
-  background-color: #306230;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* TÍTULO */
-.titulo {
-  color: white;
-  font-size: 28px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* GRID RESPONSIVO PARA LA TABLA */
-.grid-tabla {
-  display: grid;
-  /* Crea columnas automáticas adaptables que miden mínimo 130px */
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 15px;
-  width: 100%;
-}
-
-/* TARJETAS DE OPERACIÓN */
-.tarjeta-operacion {
-  background: white;
-  border-radius: 15px;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tarjeta-operacion:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.multiplicacion {
-  color: #7f8c8d;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.resultado {
-  color: #2a5298;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-/* MEDIA QUERIES (Ajustes responsivos finos) */
-
-/* Pantallas móviles muy pequeñas */
-@media (max-width: 480px) {
-  body {
-    padding: 15px;
-  }
-  
-  .titulo {
-    font-size: 24px;
-  }
-
-  .grid-tabla {
-    /* En pantallas muy pequeñas mostramos de a 2 tarjetas por fila */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .tarjeta-operacion {
-    padding: 15px 10px;
-  }
-
-  .resultado {
-    font-size: 22px;
-  }
-}/* RESETEO BÁSICO RETRO */
+/* RESETEO BÁSICO RETRO */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -184,10 +55,55 @@ body {
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
+.btn-probar:hover {
+  background-color: #8bac0f;
+  color: #0f380f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* EFECTO DE BOTÓN PRESIONADO REALISTA DE 8-BITS */
 .btn-probar:active {
   transform: translate(4px, 4px); /* Se mueve hacia la sombra */
   box-shadow: 1px 1px 0px #0f380f; /* La sombra se achica */
+}
+
+/* NUEVOS ESTILOS: CONTENEDOR DE INPUT */
+.contenedor-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* INPUT ESTILO PANTALLA GAME BOY HUNDIDA */
+.input-retro {
+  background-color: #8bac0f;
+  color: #0f380f;
+  border: 4px solid #0f380f;
+  width: 100%;
+  max-width: 180px; /* Tamaño alineado en proporción de pirámide */
+  padding: 12px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  /* Sombra rígida hacia adentro para simular profundidad pixelada */
+  box-shadow: inset 4px 4px 0px #0f380f; 
+}
+
+.input-retro::placeholder {
+  color: #306230;
+  opacity: 0.6;
+}
+
+/* Quita las flechas por defecto de los inputs number para mantener el pixel art limpio */
+.input-retro::-webkit-outer-spin-button,
+.input-retro::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-retro[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* TÍTULO */
@@ -218,6 +134,11 @@ body {
   justify-content: center;
   gap: 10px;
   box-shadow: 4px 4px 0px #0f380f;
+}
+
+.tarjeta-operacion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .multiplicacion {
@@ -254,5 +175,11 @@ body {
   .btn-probar {
     font-size: 12px;
     max-width: 200px;
+  }
+
+  .input-retro {
+    font-size: 12px;
+    max-width: 150px;
+    padding: 10px;
   }
 }
