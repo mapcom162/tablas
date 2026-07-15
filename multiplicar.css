@@ -1,0 +1,258 @@
+/* RESETEO BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #4b774b, #236423);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* FILA SUPERIOR: BOTÓN */
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-probar {
+  background-color: white;
+  color: #2a5298;
+  border: none;
+  width: 100%;
+  max-width: 300px; /* Tamaño del botón controlado */
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-probar:hover {
+  background-color: #306230;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* TÍTULO */
+.titulo {
+  color: white;
+  font-size: 28px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* GRID RESPONSIVO PARA LA TABLA */
+.grid-tabla {
+  display: grid;
+  /* Crea columnas automáticas adaptables que miden mínimo 130px */
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+/* TARJETAS DE OPERACIÓN */
+.tarjeta-operacion {
+  background: white;
+  border-radius: 15px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-operacion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.multiplicacion {
+  color: #7f8c8d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.resultado {
+  color: #2a5298;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES (Ajustes responsivos finos) */
+
+/* Pantallas móviles muy pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+  
+  .titulo {
+    font-size: 24px;
+  }
+
+  .grid-tabla {
+    /* En pantallas muy pequeñas mostramos de a 2 tarjetas por fila */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .tarjeta-operacion {
+    padding: 15px 10px;
+  }
+
+  .resultado {
+    font-size: 22px;
+  }
+}/* RESETEO BÁSICO RETRO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Evita bordes redondeados modernos y sombras difuminadas */
+  border-radius: 0 !important; 
+}
+
+body {
+  font-family: 'Press Start 2P', monospace; /* Tipografía pixelada */
+  background-color: #306230; /* Color de la carcasa de la consola */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* EL CONTENEDOR SIMULA LA PANTALLA DE LA GAME BOY */
+.contenedor-principal {
+  background-color: #9bbc0f; /* Color verde claro de pantalla encendida */
+  border: 6px solid #0f380f; /* Marco negro pixelado */
+  width: 100%;
+  max-width: 650px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  /* Sombra rígida sin difuminar para simular efecto 3D pixelado */
+  box-shadow: 10px 10px 0px #0f380f; 
+}
+
+/* FILA SUPERIOR: BOTÓN */
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* BOTÓN PROBAR (Estilo cartucho/consola) */
+.btn-probar {
+  background-color: #8bac0f;
+  color: #0f380f;
+  border: 4px solid #0f380f;
+  width: 100%;
+  max-width: 250px;
+  padding: 12px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px #0f380f; /* Sombra de bloque sólida */
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+/* EFECTO DE BOTÓN PRESIONADO REALISTA DE 8-BITS */
+.btn-probar:active {
+  transform: translate(4px, 4px); /* Se mueve hacia la sombra */
+  box-shadow: 1px 1px 0px #0f380f; /* La sombra se achica */
+}
+
+/* TÍTULO */
+.titulo {
+  color: #0f380f;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+/* GRID DE TARJETAS */
+.grid-tabla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* TARJETAS DE OPERACIÓN */
+.tarjeta-operacion {
+  background-color: #8bac0f;
+  border: 4px solid #0f380f;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 4px 4px 0px #0f380f;
+}
+
+.multiplicacion {
+  color: #306230;
+  font-size: 10px; /* Letras pixeladas se leen mejor en tamaños pequeños */
+}
+
+.resultado {
+  color: #0f380f;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* AJUSTES RESPONSIVOS EN MÓVIL */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .contenedor-principal {
+    padding: 20px 10px;
+    box-shadow: 6px 6px 0px #0f380f;
+  }
+
+  .titulo {
+    font-size: 14px;
+  }
+
+  .grid-tabla {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas en celular */
+    gap: 8px;
+  }
+
+  .btn-probar {
+    font-size: 12px;
+    max-width: 200px;
+  }
+}
