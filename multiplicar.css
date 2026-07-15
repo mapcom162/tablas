@@ -68,6 +68,36 @@ body {
   box-shadow: 1px 1px 0px #0f380f; /* La sombra se achica */
 }
 
+/* BOTÓN Anterior (Estilo cartucho/consola) */
+.btn-anterior {
+  background-color: #8bac0f;
+  color: #0f380f;
+  border: 4px solid #0f380f;
+  width: 100%;
+  margin-left: 100px;
+  max-width: 250px;
+  padding: 12px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px #0f380f; /* Sombra de bloque sólida */
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-anterior:hover {
+  background-color: #8bac0f;
+  color: #0f380f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* EFECTO DE BOTÓN PRESIONADO REALISTA DE 8-BITS */
+.btn-anterior:active {
+  transform: translate(4px, 4px); /* Se mueve hacia la sombra */
+  box-shadow: 1px 1px 0px #0f380f; /* La sombra se achica */
+}
+
 /* NUEVOS ESTILOS: CONTENEDOR DE INPUT */
 .contenedor-input {
   width: 100%;

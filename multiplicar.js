@@ -1,7 +1,7 @@
 function generarTablas(){
     let contenedor = document.getElementById("contenedor");
     let contenido = "";
-    let tabla = parseInt(document.getElementById("txtTabla").value);
+    let tabla = parseFloat(document.getElementById("txtTabla").value);
     let titulo = document.getElementById("titulo")
 
     if (isNaN(tabla)){
