@@ -5,7 +5,7 @@ function generarTablas(){
     let titulo = document.getElementById("titulo")
 
     if (isNaN(tabla)){
-        tabla = 0;
+        tabla = ultTabla;
     }
 
     titulo.innerHTML = "Tabla del " + tabla
@@ -15,3 +15,5 @@ function generarTablas(){
     }
     contenedor.innerHTML = contenido;
 }
+
+let ultTabla = tabla;
